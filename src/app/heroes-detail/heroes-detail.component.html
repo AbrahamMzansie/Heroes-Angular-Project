@@ -1,7 +1,7 @@
-<div *ngIf="selectedHero">
-    <h2>{{ selectedHero.name }} Details</h2>
-    <div>id : {{ selectedHero.id }}</div>
-  
+
+<div *ngIf="hero">
+    <h2>{{ hero.name }} Details</h2>
+    <div>id : {{ hero.id }}</div>  
     <div>
       <label for="name">Hero Name :</label>
       <input
@@ -9,7 +9,10 @@
         type="text"
         name="name"
         id="name"
-        [(ngModel)]="selectedHero.name"
+        [(ngModel)]="hero.name"
       />
     </div>
+    
   </div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
